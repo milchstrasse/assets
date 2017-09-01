@@ -4,7 +4,7 @@ header[role=banner]{
   border-bottom: 1px solid black;
   @include abst_padding;
   
-  background-color: rgba(0,0,0, 0.5);
+  background-color: rgba(0,0,0, 0.3);
   h1, p, a, a:visited{
     color: rgba(255,255,255, 1);
   }
