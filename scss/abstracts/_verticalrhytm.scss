@@ -1,0 +1,53 @@
+// inspired by https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm
+
+// MRG 23.10.2016
+
+
+
+
+html {
+  @include phone{
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+  
+  @include bigscreen {
+    font-size: 20px;
+  }
+}
+
+@function type-scale($level) {
+  @return map-get($type-scale, $level);
+}
+
+// Again, we can make a helper function:
+@function line-heights($level) {
+  @return map-get($line-heights, $level);
+}
+
+@mixin type-setting($level: 0) {
+  font-size: type-scale($level);
+  line-height: line-heights($level);
+}
+
+// Angewendet
+
+h1{ 
+  @include type-setting(2); 
+  margin-bottom: $abst_u;
+}
+h2{ 
+  @include type-setting(1); 
+  margin-bottom: $abst_u;
+}
+p,li{ 
+  @include type-setting(0); 
+  margin-bottom: $abst_u;
+}

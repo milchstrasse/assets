@@ -1,0 +1,14 @@
+// Diverse eigene Mixins
+
+@mixin abst_padding($faktor: 1) {
+  padding:  $abst_o * $faktor 
+            $abst_r * $faktor 
+            $abst_u * $faktor 
+            $abst_l * $faktor;
+}
+@mixin abst_margin($faktor: 1) {
+  margin:  $abst_o * $faktor 
+            $abst_r * $faktor 
+            $abst_u * $faktor 
+            $abst_l * $faktor;
+}

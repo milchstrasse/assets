@@ -1,0 +1,62 @@
+/*
+MRG
+
+Datum: 
+26.08.2015, 14.04.2016, 
+plainkit-mrg 18.10.2016
+velove mit Bourbon und Neat 22.10.2016
+
+
+
+*/
+
+
+.container{
+  background-size: cover; // Hintergrundbild immer über die ganze Breite
+  
+  article, .customfz{
+    margin: 0 auto;
+    
+    @include phone {
+    width: $con_breite_phone;
+    }
+
+    @include tablet {
+      width: $con_breite_tablet;
+    }
+
+    @include desktop {
+      width: $con_breite_desktop;
+    }
+
+    @include bigscreen {
+      width: $con_breite_desktop;
+    }
+
+    max-width: $con_breite_max;
+    }
+
+  
+  .eineSpalte{
+    .content, header{
+      margin: 0 auto;
+      width: $lay_textarea_maxbreite + $abst_l + $abst_r;
+    }
+  }
+  
+  .zweiSpalten{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  header{
+    flex: $con_header 0 300px;    
+  }
+  .content{
+    flex: $con_content 0 300px;
+  }
+}
+
+

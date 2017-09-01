@@ -1,0 +1,69 @@
+// ---------------------------------------------------- Header
+
+header[role=banner]{
+  border-bottom: 1px solid black;
+  @include abst_padding;
+  
+  background-color: rgba(0,0,0, 0.5);
+  h1, p, a, a:visited{
+    color: rgba(255,255,255, 1);
+  }
+  
+  .bannavi{
+    @include type-setting(0);
+    line-height: $base-line-height * 4;
+  }
+  
+  li{
+    display: inline-block;
+    &:hover{
+      text-decoration: none;
+      background: $button-nav-hover-color;
+      a{
+        color: white;
+      }
+    }
+      
+      
+
+      
+    }
+     li a{
+      @include type-setting(0);
+    }
+  }
+  .dyn li{
+    @include abst_margin(1);
+    background-color: $button-nav-color;
+  }
+  .stat li{
+  }
+
+.banpageinfo span{
+  margin-left: $abst_l;
+}
+
+
+// ---------------------------------------------------- Main
+
+article{
+  background-color: white;
+  
+  header{
+    @include abst_padding;
+    margin-bottom: $base-line-height * 2;
+    h1{
+      @include type-setting(3);
+    }
+    .subline{
+      @include type-setting(1);
+    }
+    
+  }
+  .content{
+    @include abst_padding;
+  }
+  .newarea{
+    @include abst_padding;
+  }
+}

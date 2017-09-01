@@ -1,0 +1,43 @@
+/* MRG
+
+Variablen werden in abstracts/* verwendet
+
+18.10.2016 plainkit-mrg
+
+*/
+
+
+
+
+//    Farben
+
+
+//    Layout allgemein
+$lay_textarea_maxbreite: 35rem;
+
+$base-font-size: 1rem;
+//base-line-height ist nur halb so hoch wie eine Zeile sein sollte --> mehr Möglichkeiten beim Layout
+$base-line-height: $base-font-size * 1.2 / 2; //
+
+$ratio: 1.618; // Verhältnisse, z.B golderner Schnitt
+$grid: 1rem * $ratio;
+
+  // Abstände
+  $abst_o: 1 * $base-line-height;
+  $abst_r: 0.5rem * $ratio;
+  $abst_u: 1 * $base-line-height;
+  $abst_l: 0.5rem * $ratio;
+
+
+//    container
+// Breitenverhältnis Header -> Content (Flex Grow)
+$con_header: 1;
+$con_content: $ratio * $ratio;
+
+$con_breite_phone: 100%;
+$con_breite_tablet: 90%;
+$con_breite_desktop: 80%;
+$con_breite_max: 1300px;
+
+//$con_breite_header: 40%;  // Breite des Headers
+//$con_breite_content: 100% - $con_breite_header;  // Breite des Contents

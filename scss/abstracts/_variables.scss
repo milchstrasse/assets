@@ -1,0 +1,55 @@
+// hier werden für alle Variablen default-Werte gesetzt
+// im jeweiligen Layout können sie überschrieben werden
+
+//  Farben
+// Noch optimieren (28.10.2017)
+$button-nav-color: white !default;
+$button-nav-hover-color: rgba(0,0,0, 0.4) !default;
+$button-nav-active-color: rgba(0,0,0, 0.2) !default;
+
+//    Layout allgemein
+$lay_textarea_maxbreite: 35rem !default;
+
+$base-font-size: 1rem !default;
+$base-line-height: $base-font-size * 1.2 / 2 !default; // wichtig für vertical Rhythm
+$ratio: 1.618 !default; // Verhältnisse, z.B golderner Schnitt
+
+//    Schriftverhältnisse
+$type-scale: (
+  -1: 1rem * 0.8,
+  0: 1rem ,
+  1: 1rem * $ratio,
+  2: 1rem * $ratio*$ratio, // es gibt wohl keine exponentialfunktion in sass...
+  3: 1rem * $ratio*$ratio*$ratio
+);
+
+$line-heights: (
+  -1: $base-line-height * 2,
+  0: $base-line-height * 2,
+  1: $base-line-height * 3,
+  2: $base-line-height * 4,
+  3: $base-line-height * 5
+);
+
+  // Abstände
+$abst_o: 1 * $base-line-height  !default;
+$abst_r: 0.5rem * $ratio !default;
+$abst_u: 1 * $base-line-height !default;
+$abst_l: 0.5rem * $ratio !default;
+
+
+
+//    container
+
+// Breitenverhältnis Header -> Content (Flex Grow)
+$con_header: 1 !default;
+$con_content: $ratio !default;
+
+$con_breite_phone: 100% !default;
+$con_breite_tablet: 90% !default;
+$con_breite_desktop: 80% !default;
+$con_breite_max: 1300px !default;
+
+// Transition
+$transition-dauer: 0.5s !default;
+$transition-delay: 0.3s !default;
